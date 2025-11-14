@@ -149,43 +149,31 @@ body{
 }
 
 
-/* --- 1. The Main Footer Container --- */
-
+ 
 .footer {
-    /* Use an "off-black" for a premium feel */
-    background-color: #1a1a1a;
+     background-color: #1a1a1a;
     color: #a0a0a0;
-    /* A soft, light gray for text */
-    padding: 60px 5% 0 5%;
-    /* Padding top/sides, no bottom yet */
-    font-size: 0.9rem;
-    /* 14px-15px */
-}
+     padding: 60px 5% 0 5%;
+     font-size: 0.9rem;
+ }
 
-/* --- 2. The 4-Column Content Grid --- */
-
+ 
 .footer-content {
     display: grid;
-    /* Create the 4-column layout */
-    grid-template-columns: repeat(4, 1fr);
+     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    /* Space between columns */
-    max-width: 1200px;
+     max-width: 1200px;
     margin: 0 auto;
-    /* Center the content */
-    padding-bottom: 40px;
+     padding-bottom: 40px;
 }
 
-/* --- 3. General Section Styling --- */
-
+ 
 .footer-section h3,
 .footer-section h4 {
     font-size: 1.1rem;
-    /* 18px */
-    font-weight: 600;
+     font-weight: 600;
     color: #FFFFFF;
-    /* White headings */
-    margin: 0 0 20px 0;
+     margin: 0 0 20px 0;
 }
 
 .footer-section p {
@@ -193,12 +181,10 @@ body{
     margin: 0 0 10px 0;
 }
 
-/* --- 4. Section 1: About --- */
-
+ 
 .footer-section.about h3 {
     font-size: 1.3rem;
-    /* Make the brand name slightly larger */
-    margin-bottom: 15px;
+     margin-bottom: 15px;
 }
 
  
@@ -225,34 +211,28 @@ body{
  
 .footer-section.contact p {
     display: flex;
-    /* Use flex to align icon and text */
-    align-items: center;
+     align-items: center;
     margin-bottom: 12px;
 }
 
 .footer-section.contact .material-icons {
     font-size: 1.2rem;
-    /* 19px */
-    margin-right: 10px;
+     margin-right: 10px;
     color: #FFFFFF;
-    /* Make icons stand out a bit */
-}
+ }
 
-/* --- 7. Section 4: Social Icons --- */
-
+ 
 .social-icons {
     display: flex;
     gap: 15px;
-    /* Space between icons */
-}
+ }
 
 .social-icons span {
     text-decoration: none;
     /* color: #a0a0a0; */
     font-size: 1.5rem;
     color: wheat !important;
-    /* 24px */
-    transition: color 0.3s ease, transform 0.3s ease;
+     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons span:hover {
@@ -260,36 +240,29 @@ body{
     transform: scale(1.1);
 }
 
-/* --- 8. The Copyright Bar --- */
-
+ 
 .footer-bottom {
     text-align: center;
     padding: 25px 0;
-    /* A subtle line to separate it */
-    border-top: 1px solid #333333;
+     border-top: 1px solid #333333;
     font-size: 0.85rem;
-    /* 13px */
-    color: #888888;
+     color: #888888;
 }
 
-/* --- 9. Responsive (For Mobile) --- */
-
+ 
 @media (max-width: 992px) {
     .footer-content {
-        /* Stack to 2 columns on tablets */
-        grid-template-columns: repeat(2, 1fr);
+         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 576px) {
     .footer-content {
-        /* Stack to 1 column on small phones */
-        grid-template-columns: 1fr;
+         grid-template-columns: 1fr;
     }
 
     .footer-section {
-        /* Add space between stacked sections */
-        margin-bottom: 20px;
+         margin-bottom: 20px;
     }
 }
 

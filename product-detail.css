@@ -1,8 +1,4 @@
-/* ===============================
-   PREMIUM PRODUCT DETAILS PAGE
-=============================== */
-
-:root {
+ :root {
     --brand: #0ae0ff;
     --accent: #101820;
     --soft: #f8f9fa;
@@ -21,8 +17,7 @@ body {
     padding: 100px 8%;
 }
 
-/* Wrapper for main area */
-.product-wrapper {
+ .product-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 80px;
@@ -30,8 +25,7 @@ body {
     align-items: center;
 }
 
-/* -------- LEFT: IMAGE GALLERY -------- */
-.product-visuals {
+ .product-visuals {
     flex: 1;
     min-width: 380px;
     max-width: 500px;
@@ -73,8 +67,7 @@ body {
     opacity: 1;
 }
 
-/* -------- RIGHT: PRODUCT SUMMARY -------- */
-.glass-card {
+ .glass-card {
     background: var(--glass-bg);
     backdrop-filter: var(--blur);
     border-radius: 20px;
@@ -137,8 +130,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* CTA Button */
-.cta {
+ .cta {
     background: linear-gradient(90deg, var(--brand), #007bff);
     color: #fff;
     border: none;
@@ -160,8 +152,7 @@ body {
     box-shadow: 0 12px 30px rgba(0, 188, 212, 0.4);
 }
 
-/* -------- SPECIFICATIONS -------- */
-.specs {
+ .specs {
     margin: 80px auto 50px;
     max-width: 1000px;
 }
@@ -196,8 +187,7 @@ body {
     line-height: 1;
 }
 
-/* -------- CUSTOMER REVIEWS -------- */
-.reviews {
+ .reviews {
     margin: 50px auto;
     max-width: 1000px;
 }
@@ -251,8 +241,7 @@ body {
     line-height: 1.5;
 }
 
-/* -------- RESPONSIVE -------- */
-@media (max-width: 900px) {
+ @media (max-width: 900px) {
     .product-wrapper {
         flex-direction: column;
         text-align: center;

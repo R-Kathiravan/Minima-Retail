@@ -16,8 +16,6 @@
  }
 
  body {
-
-     /* -webkit-font-smoothing: antialiased; */
      animation: fadeIn 0.8s ease-out;
  }
 
@@ -115,16 +113,13 @@
 
  .layout-centered h2 {
      padding-left: 0;
-     /* No accent for centered titles */
  }
 
  .layout-centered h2::before {
      display: none;
-     /* Hide accent */
  }
 
 
- /* --- 4. "ABOUT" (HERO SECTION) --- */
  .about-hero {
      background-image: linear-gradient(rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.648)), url('./assets/about-hero.webp');
      background-size: cover;
@@ -140,11 +135,9 @@
 
  .about-hero h1 {
      font-size: 3rem;
-     /* Bigger */
      font-weight: 700;
      margin-bottom: 20px;
      color: var(--color-blue);
-     /* Color for the main heading */
  }
 
  .about-hero .subtitle {
@@ -158,7 +151,6 @@
      color: #e7f3ff;
  }
 
- /* --- 5. 2-COLUMN SPLIT LAYOUT --- */
  .layout-split .container {
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -169,7 +161,6 @@
  .split-image img {
      border-radius: 8px;
      background-color: #f7f7f7;
-     /* Hover animation */
      transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
  }
 
@@ -186,7 +177,6 @@
      order: 1;
  }
 
- /* --- 6. STYLED LISTS --- */
  .styled-list {
      list-style: none;
      padding-left: 0;
@@ -217,7 +207,6 @@
      color: var(--color-orange);
  }
 
- /* --- 7. "WHAT WE OFFER" (PURPLE) --- */
  .offer-list {
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -240,7 +229,6 @@
      left: 0;
      top: 0;
      color: var(--color-purple);
-     /* Purple checkmark */
      font-weight: 600;
  }
 
@@ -249,13 +237,11 @@
 
  }
 
- /* --- 8. GRID LAYOUTS ("Why Us" & "Values") --- */
  .section-subtitle {
      text-align: center;
      font-size: 1.1rem;
      max-width: 600px;
      margin: -10px auto 50px auto;
-     /* Pull up */
  }
 
  .grid-container {
@@ -264,7 +250,6 @@
      gap: 30px;
  }
 
- /* "Why Choose Us" Card (Red) */
  #why-choose-us-grid .grid-item {
      background-color: #FFFFFF;
      padding: 30px;
@@ -285,7 +270,6 @@
 
  #why-choose-us-grid .icon-check {
      color: var(--color-red);
-     /* Red checkmark */
      font-weight: 600;
      margin-right: 8px;
  }
@@ -296,7 +280,6 @@
      align-items: center;
  }
 
- /* "Our Values" Card (Brown) */
  #values-grid .grid-item-simple {
      background-color: #FFFFFF;
      border-radius: 8px;
@@ -313,10 +296,8 @@
      font-size: 1.15rem;
      margin-bottom: 10px;
      color: var(--color-brown);
-     /* Brown heading */
  }
 
- /* --- 9. "CONTACT US" (Blue) --- */
  #contact {
      background: linear-gradient(160deg, #faf4f6b3, #fffafab3);
      /* margin: 6%; */
@@ -354,7 +335,6 @@
  .contact-item .material-icons {
      font-size: 2.5rem;
      color: var(--color-blue);
-     /* Blue icon */
      margin-bottom: 15px;
  }
 
@@ -378,7 +358,6 @@
      color: var(--color-blue);
  }
 
- /* --- 10. ANIMATIONS --- */
  @keyframes fadeIn {
      from {
          opacity: 0;
@@ -401,7 +380,6 @@
      }
  }
 
- /* --- 11. RESPONSIVE --- */
  @media (max-width: 900px) {
      .layout-split .container {
          grid-template-columns: 1fr;
