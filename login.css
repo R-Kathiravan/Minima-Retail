@@ -1,0 +1,356 @@
+    :root {
+        --color-brand: #007bff;
+        --color-text-dark: #222222;
+        --color-text-light: #555555;
+        --color-border: #cccccc;
+        --color-error: #dc3545;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #FFFFFF;
+        color: var(--color-text-light);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .premium-auth-layout {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .brand-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 75%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('./assets/login-signup-img.webp');
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px;
+        color: #FFFFFF;
+        transition: left 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .layout-reversed .brand-panel {
+        left: 50%;
+    }
+
+    .brand-panel h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand-panel p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        max-width: 400px;
+        opacity: 0.9;
+    }
+
+    .brand-panel .brand-text {
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .brand-panel .signup-text {
+        /* position: absolute; */
+        bottom: 60px;
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+
+
+    .layout-reversed .brand-panel .signup-text {
+        opacity: 0.9;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    .layout-reversed .brand-panel .login-text {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+
+
+    .form-panel {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        transition: left 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .layout-reversed .form-panel {
+        left: 0;
+    }
+
+    .auth-container {
+        max-width: 450px;
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        overflow-y: scroll;
+        min-height: 500px;
+    }
+
+    .auth-nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .auth-nav-btn {
+        background: none;
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--color-text-light);
+        cursor: pointer;
+        padding: 10px 0;
+        position: relative;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+    }
+
+    .auth-nav-btn::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-brand);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .auth-nav-btn.active {
+        color: var(--color-text-dark);
+        opacity: 1;
+    }
+
+    .auth-nav-btn.active::after {
+        transform: scaleX(1);
+    }
+
+    .form-wrapper-container {
+        position: relative;
+        min-height: 350px;
+    }
+
+    .form-wrapper {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(20px);
+        transition: all 0.4s ease-out;
+    }
+
+    .form-wrapper.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition-delay: 0.2s;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 15px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+        color: var(--color-text-dark);
+        box-sizing: border-box;
+    }
+
+    .form-label {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: var(--color-text-light);
+        background-color: #FFFFFF;
+        padding: 0 5px;
+        font-size: 1rem;
+        transition: all 0.2s ease-out;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .form-input:focus+.form-label,
+    .form-input:not(:placeholder-shown)+.form-label {
+        top: -10px;
+        left: 10px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--color-brand);
+        z-index: 2;
+    }
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--color-brand);
+    }
+
+    .form-text-link {
+        display: block;
+        text-align: right;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--color-brand);
+        text-decoration: none;
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+
+    .error-message {
+        color: var(--color-error);
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .form-input.invalid {
+        border-color: var(--color-error);
+    }
+
+    .submit-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-text-dark);
+        color: #FFFFFF;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #aaa;
+        margin: 25px 0;
+    }
+
+    .separator::before,
+    .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #eee;
+    }
+
+    .separator:not(:empty)::before {
+        margin-right: .25em;
+    }
+
+    .separator:not(:empty)::after {
+        margin-left: .25em;
+    }
+
+    .social-login-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        background: #FFFFFF;
+        color: var(--color-text-dark);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .social-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-btn:hover {
+        border-color: #888;
+        background-color: #f9f9f9;
+    }
+
+    @media (max-width: 900px) {
+        .premium-auth-layout {
+            display: block;
+        }
+
+        .brand-panel {
+            position: static;
+            width: auto;
+            min-height: 300px;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .brand-panel .signup-text {
+            display: block;
+        }
+
+        .form-panel {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 40px 20px;
+        }
+    }

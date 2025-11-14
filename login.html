@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login || Minimal Retail</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="shared.css" />
+</head>
+
+<body>
+
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.webp" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <div class="mobile-nav">
+                    <a href="cart.html" class="cart-link">
+                        <span class="material-icons">shopping_cart</span>
+                        <span id="cart-count1">0</span>
+                    </a><br>
+                    <a href="login.html">
+                        <span class="material-icons">login</span>
+                    </a>
+                </div>
+                <div class="btn-close"><span class="material-icons">close</span></div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons">login</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+    <div class="premium-auth-layout" id="auth-layout">
+
+        <div class="brand-panel">
+            <div class="brand-text login-text">
+                <h1>Welcome Back</h1>
+                <p>Sign in to access your account, track orders, and continue your curated tech journey.</p>
+            </div>
+            <div class="brand-text signup-text">
+                <h1>Create an Account</h1>
+                <p>Join us to start building your perfect minimal workspace with our curated collection of electronics.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-panel">
+
+            <div class="auth-container">
+
+                <nav class="auth-nav">
+                    <button class="auth-nav-btn active" id="login-tab">Login</button>
+                    <button class="auth-nav-btn" id="signup-tab">Sign Up</button>
+                </nav>
+
+                <div class="form-wrapper-container">
+
+                    <form id="login-form" class="form-wrapper active" novalidate>
+
+                        <div class="form-group">
+                            <input type="email" id="login-email" class="form-input" placeholder=" " required>
+                            <label for="login-email" class="form-label">Email Address</label>
+                            <div class="error-message" id="login-email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" id="login-password" class="form-input" placeholder=" " required>
+                            <label for="login-password" class="form-label">Password</label>
+                            <div class="error-message" id="login-password-error"></div>
+                        </div>
+
+                        <!-- <a href="#" class="form-text-link">Forgot Password?</a> -->
+
+                        <button type="submit" class="submit-btn">Login</button>
+
+                        <div class="separator">OR</div>
+
+                        <div class="social-login-group">
+                            <a href="404page.html" type="button" class="social-btn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google">
+                                Continue with Google
+                            </a>
+                        </div>
+
+                    </form>
+
+                    <form id="signup-form" class="form-wrapper" novalidate>
+
+                        <div class="form-group">
+                            <input type="text" id="signup-name" class="form-input" placeholder=" " required>
+                            <label for="signup-name" class="form-label">Full Name</label>
+                            <div class="error-message" id="signup-name-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="signup-email" class="form-input" placeholder=" " required>
+                            <label for="signup-email" class="form-label">Email Address</label>
+                            <div class="error-message" id="signup-email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" id="signup-password" class="form-input" placeholder=" " required>
+                            <label for="signup-password" class="form-label">Create Password</label>
+                            <div class="error-message" id="signup-password-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" id="signup-confirm-password" class="form-input" placeholder=" "
+                                required>
+                            <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                            <div class="error-message" id="signup-confirm-password-error"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Create Account</button>
+                        <div class="separator">OR</div>
+
+                        <div class="social-login-group">
+                            <a href="404page.html" type="button" class="social-btn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google">
+                                Continue with Google
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about" data-aos="fade-up" data-aos-delay="200">
+                <a href="index.html" class="logo"><img src="./assets/stackly-logo1.webp" alt="stackly-logo"></a>
+                <p>Delivering innovation through simplicity. Explore premium electronics crafted for performance,
+                    quality, and style.</p>
+            </div>
+            <div class="footer-section links" data-aos="fade-up" data-aos-delay="300">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Us</h4>
+                <p><span class="material-icons">call</span> +91 98765 43210</p>
+                <p><span class="material-icons">email</span> info@thestackly.com</p>
+                <p><span class="material-icons">location_on</span> Salem, India</p>
+            </div>
+            <div class="footer-section social" data-aos="fade-up" data-aos-delay="500">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="404page.html"><span class="material-icons">facebook</span></a>
+                    <a href="404page.html"><span class="material-icons">alternate_email</span></a>
+                    <a href="404page.html"><span class="material-icons">smart_display</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Stackly. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const loginTab = document.getElementById('login-tab');
+            const signupTab = document.getElementById('signup-tab');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const formContainer = document.querySelector('.form-wrapper-container');
+            const layout = document.getElementById('auth-layout');
+            setTimeout(() => {
+                if (loginForm.classList.contains('active')) {
+                    formContainer.style.minHeight = loginForm.offsetHeight + 'px';
+                } else {
+                    formContainer.style.minHeight = signupForm.offsetHeight + 'px';
+                }
+            }, 100);
+
+            loginTab.addEventListener('click', () => {
+                layout.classList.remove('layout-reversed');
+
+                loginTab.classList.add('active');
+                signupTab.classList.remove('active');
+
+                loginForm.classList.add('active');
+                signupForm.classList.remove('active');
+
+                formContainer.style.minHeight = loginForm.offsetHeight + 'px';
+            });
+
+            signupTab.addEventListener('click', () => {
+                layout.classList.add('layout-reversed');
+
+                loginTab.classList.remove('active');
+                signupTab.classList.add('active');
+
+                loginForm.classList.remove('active');
+                signupForm.classList.add('active');
+
+                formContainer.style.minHeight = signupForm.offsetHeight + 'px';
+            });
+
+            const loginEmail = document.getElementById('login-email');
+            const loginPassword = document.getElementById('login-password');
+            const loginEmailError = document.getElementById('login-email-error');
+            const loginPasswordError = document.getElementById('login-password-error');
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                clearError(loginEmail, loginEmailError);
+                clearError(loginPassword, loginPasswordError);
+
+                if (loginEmail.value.trim() === '') {
+                    showError(loginEmail, loginEmailError, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(loginEmail.value)) {
+                    showError(loginEmail, loginEmailError, 'Please enter a valid email');
+                    isValid = false;
+                }
+
+                if (loginPassword.value.trim() === '') {
+                    showError(loginPassword, loginPasswordError, 'Password is required');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    console.log("Login form is valid. Submitting...");
+                    alert('Login Successful!');
+                    window.location.href = '404page.html'
+                    loginForm.reset();
+                }
+            });
+
+            const signupName = document.getElementById('signup-name');
+            const signupEmail = document.getElementById('signup-email');
+            const signupPassword = document.getElementById('signup-password');
+            const signupConfirmPassword = document.getElementById('signup-confirm-password');
+
+            const signupNameError = document.getElementById('signup-name-error');
+            const signupEmailError = document.getElementById('signup-email-error');
+            const signupPasswordError = document.getElementById('signup-password-error');
+            const signupConfirmPasswordError = document.getElementById('signup-confirm-password-error');
+
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                clearError(signupName, signupNameError);
+                clearError(signupEmail, signupEmailError);
+                clearError(signupPassword, signupPasswordError);
+                clearError(signupConfirmPassword, signupConfirmPasswordError);
+
+                if (signupName.value.trim() === '') {
+                    showError(signupName, signupNameError, 'Full Name is required');
+                    isValid = false;
+                }
+
+                if (signupEmail.value.trim() === '') {
+                    showError(signupEmail, signupEmailError, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(signupEmail.value)) {
+                    showError(signupEmail, signupEmailError, 'Please enter a valid email');
+                    isValid = false;
+                }
+
+                if (signupPassword.value.trim().length < 8) {
+                    showError(signupPassword, signupPasswordError, 'Password must be at least 8 characters');
+                    isValid = false;
+                }
+
+                if (signupConfirmPassword.value.trim() === '') {
+                    showError(signupConfirmPassword, signupConfirmPasswordError, 'Please confirm your password');
+                    isValid = false;
+                } else if (signupPassword.value.trim() !== signupConfirmPassword.value.trim()) {
+                    showError(signupConfirmPassword, signupConfirmPasswordError, 'Passwords do not match');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    console.log("Sign up form is valid. Submitting...");
+                    // --- In a real app, you would submit this ---
+                    alert('Account Created Successfully!');
+                    signupForm.reset();
+                    // Switch to login tab after successful signup
+                    loginTab.click();
+                }
+            });
+
+
+            // --- Helper Functions (UNCHANGED) ---
+            function showError(inputElement, errorElement, message) {
+                inputElement.classList.add('invalid');
+                errorElement.innerText = message;
+                errorElement.style.display = 'block';
+            }
+
+            function clearError(inputElement, errorElement) {
+                inputElement.classList.remove('invalid');
+                errorElement.style.display = 'none';
+            }
+
+            function isValidEmail(email) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+        });
+    </script>
+</body>
+
+</html>
