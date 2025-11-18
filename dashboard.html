@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Minimal Retail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="menu-header">
+        <div class="menu">
+            <a href="index.html" class="logo"><img src="./assets/stackly-logo1.webp" alt="stackly-logo"></a>
+            <div class="menu-items">
+                <a href="index.html">Home </a>
+                <a href="about.html">About</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav">
+                    <a href="cart.html" class="cart-link">
+                        <span class="material-icons">shopping_cart</span>
+                        <span id="cart-count1">0</span>
+                    </a><br>
+                    <a href="login.html">
+                        <span class="material-icons">login</span>
+                    </a>
+                </div>
+                <div class="btn-close"><span class="material-icons">close</span></div>
+            </div>
+            <div class="menu-icons">
+                <a href="cart.html" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span id="cart-count">0</span>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons">login</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                &#9776
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <a href="#" class="sidebar-logo">
+            <span class="material-icons">storefront</span>
+            <span>Minimal Retail</span>
+        </a>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <!--<li class="nav-item">-->
+                <!--    <a href="#" class="nav-link">-->
+                <!--        <span class="material-icons">shopping_bag</span>-->
+                <!--        <span>Orders</span>-->
+                <!--    </a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--    <a href="#" class="nav-link">-->
+                <!--        <span class="material-icons">inventory_2</span>-->
+                <!--        <span>Products</span>-->
+                <!--    </a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--    <a href="#" class="nav-link">-->
+                <!--        <span class="material-icons">people</span>-->
+                <!--        <span>Customers</span>-->
+                <!--    </a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--    <a href="#" class="nav-link">-->
+                <!--        <span class="material-icons">bar_chart</span>-->
+                <!--        <span>Analytics</span>-->
+                <!--    </a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--    <a href="#" class="nav-link">-->
+                <!--        <span class="material-icons">settings</span>-->
+                <!--        <span>Settings</span>-->
+                <!--    </a>-->
+                <!--</li>-->
+            </ul>
+        </nav>
+
+        <div class="user-profile">
+            <img src="https://placehold.co/100x100/e0e7ff/4338ca?text=JD" alt="User Avatar">
+            <div>
+                <div class="user-name">Jane Doe</div>
+                <div class="user-role">Store Owner</div>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="main-header">
+            <h1>Dashboard</h1>
+        </header>
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span class="stat-card-title">Today's Revenue</span>
+                    <div class="stat-card-icon icon-revenue">
+                        <span class="material-icons">currency_rupee</span>
+                    </div>
+                </div>
+                <p class="stat-card-value">₹8,50,200</p>
+                <p class="stat-card-trend positive">+2.5% vs yesterday</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span class="stat-card-title">Today's Orders</span>
+                    <div class="stat-card-icon icon-orders">
+                        <span class="material-icons">shopping_bag</span>
+                    </div>
+                </div>
+                <p class="stat-card-value">124</p>
+                <p class="stat-card-trend positive">+1.2% vs yesterday</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span class="stat-card-title">New Visitors</span>
+                    <div class="stat-card-icon icon-visitors">
+                        <span class="material-icons">visibility</span>
+                    </div>
+                </div>
+                <p class="stat-card-value">1,520</p>
+                <p class="stat-card-trend negative">-0.8% vs yesterday</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span class="stat-card-title">Pending Orders</span>
+                    <div class="stat-card-icon icon-pending">
+                        <span class="material-icons">pending_actions</span>
+                    </div>
+                </div>
+                <p class="stat-card-value">12</p>
+                <p class="stat-card-trend positive">2 new</p>
+            </div>
+        </section>
+        <section class="charts-grid">
+            <div class="chart-card">
+                <h3>Revenue (Last 7 Days)</h3>
+                <svg class="line-chart" viewBox="0 0 500 250" preserveAspectRatio="none">
+                    <polyline class="line" points="
+                        0,150
+                        50,130
+                        100,160
+                        150,110
+                        200,100
+                        250,140
+                        300,120
+                        350,90
+                        400,100
+                        450,80
+                        500,60
+                    " />
+                </svg>
+            </div>
+            <div class="chart-card">
+                <h3>Top Products</h3>
+                <ul class="bar-chart-list">
+                    <li class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span>Smartphone X2</span>
+                            <span>120 units</span>
+                        </div>
+                        <div class="bar-track">
+                            <div class="bar-fill" data-width="90%"></div>
+                        </div>
+                    </li>
+                    <li class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span>Laptop Pro X</span>
+                            <span>85 units</span>
+                        </div>
+                        <div class="bar-track">
+                            <div class="bar-fill" data-width="70%"></div>
+                        </div>
+                    </li>
+                    <li class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span>Wireless Earbuds</span>
+                            <span>60 units</span>
+                        </div>
+                        <div class="bar-track">
+                            <div class="bar-fill" data-width="50%"></div>
+                        </div>
+                    </li>
+                    <li class="bar-chart-item">
+                        <div class="bar-chart-label">
+                            <span>Smartwatch v3</span>
+                            <span>40 units</span>
+                        </div>
+                        <div class="bar-track">
+                            <div class="bar-fill" data-width="30%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="orders-table">
+            <h3>Recent Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Order ID"><strong>#10524</strong></td>
+                        <td data-label="Product">Smartphone X2</td>
+                        <td data-label="Customer">Rohan Gupta</td>
+                        <td data-label="Status"><span class="status-pill status-shipped">Shipped</span></td>
+                        <td data-label="Total"><strong>₹64,999</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Order ID"><strong>#10523</strong></td>
+                        <td data-label="Product">Laptop Pro X</td>
+                        <td data-label="Customer">Priya Sharma</td>
+                        <td data-label="Status"><span class="status-pill status-pending">Pending</span></td>
+                        <td data-label="Total"><strong>₹89,999</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Order ID"><strong>#10522</strong></td>
+                        <td data-label="Product">Wireless Earbuds</td>
+                        <td data-label="Customer">Anil Kumar</td>
+                        <td data-label="Status"><span class="status-pill status-shipped">Shipped</span></td>
+                        <td data-label="Total"><strong>₹4,999</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Order ID"><strong>#10521</strong></td>
+                        <td data-label="Product">Smartwatch v3</td>
+                        <td data-label="Customer">Sunita Reddy</td>
+                        <td data-label="Status"><span class="status-pill status-cancelled">Cancelled</span></td>
+                        <td data-label="Total"><strong>₹12,499</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Order ID"><strong>#10520</strong></td>
+                        <td data-label="Product">Noise Cancelling Headphones</td>
+                        <td data-label="Customer">Vikram Singh</td>
+                        <td data-label="Status"><span class="status-pill status-shipped">Shipped</span></td>
+                        <td data-label="Total"><strong>₹12,499</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bars = document.querySelectorAll('.bar-fill');
+            setTimeout(() => {
+                bars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width;
+                });
+            }, 200);
+
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

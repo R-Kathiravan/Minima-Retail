@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features || SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="features.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="head-items">
+            <div class="head-logo">
+                <a href="index.html"><img src="./assets/stackly-logo.webp" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <div class="hide-head-btn">
+                    <a href="404page.html">Login/SignUp</a>
+                    <a href="404page.html">Get Started</a>
+                    <div class="btn-close"><span class="material-icons">close</span></div>
+                </div>
+            </div>
+            <div class="head-btn">
+                <a href="404page.html">Login/SignUp</a>
+                <a href="404page.html">Get Started</a>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <section class="features-hero">
+        <h1 data-aos="fade-left">All the tools you need. <br>None of the ones you don't.</h1>
+        <p data-aos="fade-right">
+            Stackly is designed to be powerful, not complicated. Explore the
+            features that will simplify your business and help you grow.
+        </p>
+    </section>
+    <nav class="features-nav">
+        <button class="feature-nav-btn active" data-filter="all">
+            <span class="material-icons">apps</span>
+            All Features
+        </button>
+        <button class="feature-nav-btn" data-filter="storefront">
+            <span class="material-icons">storefront</span>
+            Storefront
+        </button>
+        <button class="feature-nav-btn" data-filter="management">
+            <span class="material-icons">inventory_2</span>
+            Management
+        </button>
+        <button class="feature-nav-btn" data-filter="analytics">
+            <span class="material-icons">bar_chart</span>
+            Analytics
+        </button>
+    </nav>
+    <section class="features-list">
+        <div class="feature-block" data-category="management">
+            <div class="feature-text" data-aos="fade-right">
+                <h3>Smart Inventory Sync</h3>
+                <p>
+                    Whether a customer buys in-store or online, your stock is synced instantly
+                    across all platforms. Set low-stock alerts and generate purchase orders
+                    in just one click.
+                </p>
+                <ul>
+                    <li>Real-time Online & POS sync</li>
+                    <li>Low-stock notifications</li>
+                    <li>Supplier & purchase order management</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-left">
+
+                <img src="./assets/features-ui-mockup.webp">
+                alt=" Smart Inventory UI">
+            </div>
+        </div>
+        <div class="feature-block" data-category="storefront">
+            <div class="feature-text" data-aos="fade-right">
+                <h3>Beautiful, Minimal Themes</h3>
+                <p>
+                    Your brand is unique. Our theme editor lets you build a beautiful,
+                    fast, and minimal online store that looks perfect on every device.
+                    No code required.
+                </p>
+                <ul>
+                    <li>Drag-and-drop editor</li>
+                    <li>Mobile-first responsive design</li>
+                    <li>Fast-loading for better SEO</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-left">
+
+                <img src="./assets/features-themes.webp" alt="Storefront Editor UI">
+            </div>
+        </div>
+        <div class="feature-block" data-category="analytics">
+            <div class="feature-text" data-aos="fade-left">
+                <h3>Simple, Powerful Analytics</h3>
+                <p>
+                    No more confusing spreadsheets. See your top-selling products,
+                    best customers, and daily revenue in one clean, simple report.
+                    Make data-driven decisions, faster.
+                </p>
+                <ul>
+                    <li>Clean main dashboard</li>
+                    <li>Top-selling product reports</li>
+                    <li>Customer behavior insights</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-right">
+
+                <img src="./assets/features-discount.webp" alt="Simple Analytics UI">
+            </div>
+        </div>
+        <div class="feature-block" data-category="management">
+            <div class="feature-text" data-aos="fade-right">
+                <h3>Unified Point of Sale (POS)</h3>
+                <p>
+                    Sell in-person with our minimal, modern POS system. It's fully
+                    integrated with your online store, so inventory and customer
+                    data are always perfectly in sync.
+                </p>
+                <ul>
+                    <li>Accept all payment types</li>
+                    <li>Works on iPad, laptop, or phone</li>
+                    <li>Connects to receipt printers & scanners</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-left">
+
+                <img src="./assets/features-pos-system.webp" alt="Unified POS UI">
+            </div>
+        </div>
+        <div class="feature-block" data-category="storefront">
+            <div class="feature-text" data-aos="fade-left">
+                <h3>Discount & Promo Engine</h3>
+                <p>
+                    Create custom discounts in seconds. Offer a percentage off, a fixed
+                    amount, or "Buy One, Get One" deals to drive sales and reward
+                    your loyal customers.
+                </p>
+                <ul>
+                    <li>Create custom discount codes</li>
+                    <li>Schedule seasonal sales in advance</li>
+                    <li>Automatic "BOGO" and "X for Y" rules</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-right">
+
+                <img src="./assets/features-discount1.webp" alt="Discount Engine UI">
+            </div>
+        </div>
+        <div class="feature-block" data-category="management">
+            <div class="feature-text" data-aos="fade-left">
+                <h3>Customer Profiles (CRM)</h3>
+                <p>
+                    Understand your customers. Every order, in-store purchase, and
+                    email interaction is tracked in one clean profile, giving you
+                    the insights you need to build loyalty.
+                </p>
+                <ul>
+                    <li>Unified customer purchase history</li>
+                    <li>Tag and segment customers</li>
+                    <li>View lifetime value (LTV)</li>
+                </ul>
+            </div>
+            <div class="feature-visual" data-aos="fade-right">
+                <img src="./assets/features-crm.webp" alt="Customer Profile UI">
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us" data-aos="fade-down">
+        <div class="why-choose-us-container">
+            <h2 class="why-choose-us-headline">More Than Just Features</h2>
+            <p class="why-choose-us-subheadline">
+                Our platform is backed by a service you can trust.
+                We're here to help you succeed at every step.
+            </p>
+
+            <div class="why-choose-us-grid">
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-container">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <div>
+                        <h4>Secure & Easy Payments</h4>
+                        <p>We offer trusted payment methods, ensuring your safety at every step.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-container">
+                        <span class="material-icons">local_shipping</span>
+                    </div>
+                    <div>
+                        <h4>Lightning-Fast Delivery</h4>
+                        <p>Your order is packed and shipped within 24–48 hours.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-container">
+                        <span class="material-icons">support_agent</span>
+                    </div>
+                    <div>
+                        <h4>Responsive 24/7 Support</h4>
+                        <p>Our support team is always ready to help you with your queries.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-container">
+                        <span class="material-icons">verified</span>
+                    </div>
+                    <div>
+                        <h4>Warranty on All Products</h4>
+                        <p>We provide a genuine manufacturer or seller warranty.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-container">
+                        <span class="material-icons">assignment_return</span>
+                    </div>
+                    <div>
+                        <h4>Hassle-Free Returns</h4>
+                        <p>If you face any issues, returning or replacing items is quick and simple.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-us-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="icon-container">
+                        <span class="material-icons">diamond</span>
+                    </div>
+                    <div>
+                        <h4>Premium Products</h4>
+                        <p>Every product listed is handpicked for performance, durability, and style.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="cta-container" data-aos="fade-down">
+            <h2 class="cta-headline">Ready to Simplify Your Retail?</h2>
+            <p class="cta-subheadline">
+                Start your 14-day free trial today. No credit card required.
+                Cancel anytime.
+            </p>
+            <a href="404page.html" class="cta-button">
+                Start Your 14-Day Free Trial
+                <span class="material-icons">arrow_forward</span>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="saas-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-about" data-aos="fade-down" data-aos-delay="100">
+                    <h3 class="footer-logo"> <a href="index.html"><img src="./assets/stackly-logo.webp"
+                                class="logo"></a>
+                    </h3>
+                    <p class="footer-about-text">
+                        The all-in-one platform for modern, minimal retail.
+                        Helping you sell more, with less clutter.
+                    </p>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="404page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="300">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="404page.html">Book a Demo</a></li>
+                        <li><a href="404page.html">API Docs</a></li>
+                        <li><a href="404page.html">Contact Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="400">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="500">
+                    <h4>Social Links</h4>
+                    <div class="footer-socials">
+                        <a href="404page.html" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="404page.html" aria-label="Twitter"><span class="material-icons">share</span></a>
+                        <a href="404page.html" aria-label="LinkedIn"><span class="material-icons">work</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Stackly. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.feature-nav-btn');
+            const featureBlocks = document.querySelectorAll('.feature-block');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    featureBlocks.forEach(block => {
+                        const category = block.getAttribute('data-category');
+
+                        if (filter === 'all' || filter === category) {
+                            block.style.display = 'grid';
+                        } else {
+                            block.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            if (filterButtons.length > 0) {
+                filterButtons[0].click();
+            }
+        });
+    </script>
+</body>
+
+</html>
