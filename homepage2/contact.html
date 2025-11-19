@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact || SaaS</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head-items">
+            <div class="head-logo">
+                <a href="index.html"><img src="./assets/stackly-logo.webp" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <div class="hide-head-btn">
+                    <a href="login-signup.html">Login/SignUp</a>
+                    <a href="pricing.html">Get Started</a>
+                    <div class="btn-close"><span class="material-icons">close</span></div>
+                </div>
+            </div>
+            <div class="head-btn">
+                <a href="login-signup.html">Login/SignUp</a>
+                <a href="pricing.html">Get Started</a>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <section class="contact-hero">
+        <div class="hero-text">
+            <h1 data-aos="fade-left">Get in Touch With Us</h1>
+            <p data-aos="fade-right">
+                We're here to help you with anything — product support, sales enquiries,
+                technical issues, or onboarding assistance. Reach out anytime and our team
+                will get back to you quickly.
+            </p>
+
+            <div class="hero-highlights" data-aos="fade">
+                <div class="highlight" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-icons">support_agent</span>
+                    <p>Fast & friendly support</p>
+                </div>
+                <div class="highlight" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-icons">schedule</span>
+                    <p>Response within 2-4 hours</p>
+                </div>
+                <div class="highlight" data-aos="fade-up" data-aos-delay="400">
+                    <span class="material-icons">verified_user</span>
+                    <p>Trusted by retail businesses</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-down">
+            <img src="./assets/contact-hero.webp" alt="Contact Support Image">
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p class="info-desc">
+                    Fill out the form and our team will get back to you within 24 hours.
+                </p>
+
+                <ul class="info-list">
+                    <li class="info-item" data-aos="fade-down" data-aos-delay="100">
+                        <div class="info-icon-circle">
+                            <span class="material-icons">email</span>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@thestackly.com" class="info-link">info@thestackly.com</a></p>
+                            <p><a href="mailto:info@thestackly.com" class="info-link">support@thestackly.com</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="info-item" data-aos="fade-down" data-aos-delay="200">
+                        <div class="info-icon-circle">
+                            <span class="material-icons">phone</span>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+91 9876543210" class="info-link">+91 9876543210</a></p>
+                            <p style="font-size: 0.85rem; color: #888;">Mon-Fri, 9am - 6pm IST</p>
+                        </div>
+                    </li>
+
+                    <li class="info-item" data-aos="fade-down" data-aos-delay="300">
+                        <div class="info-icon-circle">
+                            <span class="material-icons">place</span>
+                        </div>
+                        <div class="info-content">
+                            <h4>Visit Us</h4>
+                            <p><i> Salem</i></p>
+                            <p>Tamil Nadu, India</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="contactForm" novalidate>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+                        <input type="text" id="contact-name" class="form-input" placeholder=" " required>
+                        <label for="contact-name" class="form-label">Full Name</label>
+                        <div class="error-message" id="error-name">Name is required</div>
+                    </div>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+                        <input type="email" id="contact-email" class="form-input" placeholder=" " required>
+                        <label for="contact-email" class="form-label">Work Email</label>
+                        <div class="error-message" id="error-email">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                        <input type="text" id="contact-subject" class="form-input" placeholder=" " required>
+                        <label for="contact-subject" class="form-label">Subject</label>
+                        <div class="error-message" id="error-subject">Subject is required</div>
+                    </div>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+                        <textarea id="contact-message" class="form-input" placeholder=" " required></textarea>
+                        <label for="contact-message" class="form-label">How can we help?</label>
+                        <div class="error-message" id="error-message">Message cannot be empty</div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Send Message <span class="material-icons">send</span>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.9146091054317!2d78.17140487467015!3d11.682956588526352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e1!3m2!1sen!2sin!4v1763108035474!5m2!1sen!2sin"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section class="faq-section" data-aos="fade-up">
+        <div class="faq-container">
+            <h2 class="faq-headline">Frequently Asked Questions</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Do I need a credit card to sign up?</h4>
+                    <p data-aos="fade-left">No! You can start your 14-day free trial without entering any payment
+                        information. You only pay
+                        when you're ready to launch.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Can I cancel my subscription anytime?</h4>
+                    <p data-aos="fade-left">Yes, absolutely. There are no long-term contracts for monthly plans. You can
+                        cancel your account
+                        at any time from your dashboard.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Is there a setup fee?</h4>
+                    <p data-aos="fade-left">No, there are no setup fees. Our pricing is transparent, and you only pay
+                        the monthly or annual
+                        subscription fee.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Do you take transaction fees?</h4>
+                    <p data-aos="fade-left">We do not charge transaction fees on our end. However, payment gateways
+                        (like Stripe or PayPal)
+                        typically charge a standard processing fee.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Can I upgrade my plan later?</h4>
+                    <p data-aos="fade-left">Yes, you can upgrade or downgrade your plan at any time directly from your
+                        account settings.
+                        Changes happen instantly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-aos="fade-right">Do you offer refunds?</h4>
+                    <p data-aos="fade-left">If you're not satisfied within the first 30 days of your paid subscription,
+                        contact our support
+                        team for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="cta-container" data-aos="fade-down">
+            <h2 class="cta-headline">Ready to Simplify Your Retail?</h2>
+            <p class="cta-subheadline">
+                Start your 14-day free trial today. No credit card required.
+                Cancel anytime.
+            </p>
+            <a href="login-signup.html" class="cta-button">
+                Start Your 14-Day Free Trial
+                <span class="material-icons">arrow_forward</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <footer class="saas-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-about" data-aos="fade-down" data-aos-delay="100">
+                    <h3 class="footer-logo"> <a href="index.html"><img src="./assets/stackly-logo.webp"
+                                class="logo"></a>
+                    </h3>
+                    <p class="footer-about-text">
+                        The all-in-one platform for modern, minimal retail.
+                        Helping you sell more, with less clutter.
+                    </p>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="300">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="booknow.html">Book a Demo</a></li>
+                        <li><a href="404page.html">Contact Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="400">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="500">
+                    <h4>Social Links</h4>
+                    <div class="footer-socials">
+                        <a href="404page.html" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="404page.html" aria-label="Twitter"><span class="material-icons">share</span></a>
+                        <a href="404page.html" aria-label="LinkedIn"><span class="material-icons">work</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Stackly. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+
+            const nameInput = document.getElementById('contact-name');
+            const emailInput = document.getElementById('contact-email');
+            const subjectInput = document.getElementById('contact-subject');
+            const messageInput = document.getElementById('contact-message');
+
+            const nameError = document.getElementById('error-name');
+            const emailError = document.getElementById('error-email');
+            const subjectError = document.getElementById('error-subject');
+            const messageError = document.getElementById('error-message');
+
+            function showError(input, errorDiv, message) {
+                input.classList.add('invalid');
+                errorDiv.innerText = message;
+                errorDiv.style.display = 'block';
+            }
+
+            function clearError(input, errorDiv) {
+                input.classList.remove('invalid');
+                errorDiv.style.display = 'none';
+            }
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                if (nameInput.value.trim() === '') {
+                    showError(nameInput, nameError, 'Name is required');
+                    isValid = false;
+                } else {
+                    clearError(nameInput, nameError);
+                }
+
+                if (emailInput.value.trim() === '') {
+                    showError(emailInput, emailError, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(emailInput.value.trim())) {
+                    showError(emailInput, emailError, 'Please enter a valid work email');
+                    isValid = false;
+                } else {
+                    clearError(emailInput, emailError);
+                }
+
+                if (subjectInput.value.trim() === '') {
+                    showError(subjectInput, subjectError, 'Subject is required');
+                    isValid = false;
+                } else {
+                    clearError(subjectInput, subjectError);
+                }
+
+                if (messageInput.value.trim().length < 10) {
+                    showError(messageInput, messageError, 'Message must be at least 10 characters');
+                    isValid = false;
+                } else {
+                    clearError(messageInput, messageError);
+                }
+
+                if (isValid) {
+                    const btn = form.querySelector('.submit-btn');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = 'Sending...';
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        alert("Message sent successfully!");
+                        form.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -59,23 +59,68 @@ header {
     color: #111111;
 }
 
-.home-select {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    min-width: 160px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.home-nav {
+    position: relative;
+    display: inline-block;
+}
+
+.home-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-icon {
+    font-size: 18px;
+    transition: 0.3s ease;
 }
 
 .home-nav {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
 }
 
-.home-nav:hover .home-select {
+.dropdown-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.home-select {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: black;
+    border: 1px solid #ddd;
+    /* padding: 8px 0; */
+    border-radius: 10px;
+    min-width: 150px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.home-select.show {
     display: block;
+}
+
+.home-select a {
+    display: block;
+    padding: 10px 14px;
+    color: #ffffff !important;
+    text-decoration: none;
 }
 
 .hide-head-btn {
@@ -88,7 +133,10 @@ header {
 
 @media (max-width:768px) {
     .home-select {
-        left: 10% !important;
+        left: 0% !important;
+    }
+    .dropdown-icon{
+        color: white;
     }
 
     .menu-items {

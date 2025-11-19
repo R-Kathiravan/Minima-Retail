@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now || SaaS</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="booknow.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head-items">
+            <div class="head-logo">
+                <a href="index.html"><img src="./assets/stackly-logo.webp" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <div class="hide-head-btn">
+                    <a href="login-signup.html">Login/SignUp</a>
+                    <a href="pricing.html">Get Started</a>
+                    <div class="btn-close"><span class="material-icons">close</span></div>
+                </div>
+            </div>
+            <div class="head-btn">
+                <a href="login-signup.html">Login/SignUp</a>
+                <a href="pricing.html">Get Started</a>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <section class="demo-hero">
+        <div class="container">
+            <h1 data-aos="fade-left">See Stackly in Action</h1>
+            <p data-aos="fade-right">Book a personalized 30-minute walkthrough with a product expert. We'll show you how to streamline your
+                retail operations, sync inventory, and grow your sales.</p>
+        </div>
+    </section>
+    <section class="booking-section">
+        <div class="booking-card">
+            <div class="booking-grid">
+                <div class="calendar-wrapper" data-aos="fade-up">
+                    <div class="calendar-header">
+                        <span id="currentMonthDisplay">November 2025</span>
+                        <div style="display:flex; gap:10px;">
+                            <span class="material-icons" style="cursor:pointer"
+                                onclick="changeMonth(-1)">chevron_left</span>
+                            <span class="material-icons" style="cursor:pointer"
+                                onclick="changeMonth(1)">chevron_right</span>
+                        </div>
+                    </div>
+                    <div class="days-grid" id="calendarDays">
+                        <div class="day-label">S</div>
+                        <div class="day-label">M</div>
+                        <div class="day-label">T</div>
+                        <div class="day-label">W</div>
+                        <div class="day-label">T</div>
+                        <div class="day-label">F</div>
+                        <div class="day-label">S</div>
+                    </div>
+                    <p id="date-error-msg" class="error-msg" style="text-align: center; margin-top:10px;">Please select
+                        a date first</p>
+                </div>
+                <div class="time-wrapper" data-aos="fade-down" data-aos-delay="200">
+                    <h4 style="margin-bottom: 15px;">Available Times</h4>
+                    <p id="time-helper-text" style="font-size: 0.9rem; color: #999; margin-bottom: 10px;">Select a date
+                        to see times</p>
+                    <div class="time-slots" id="timeSlots">
+                        <div class="time-slot disabled" onclick="selectTime(this, '09:00')">9:00 AM</div>
+                        <div class="time-slot disabled" onclick="selectTime(this, '10:30')">10:30 AM</div>
+                        <div class="time-slot disabled" onclick="selectTime(this, '13:00')">1:00 PM</div>
+                        <div class="time-slot disabled" onclick="selectTime(this, '15:45')">3:45 PM</div>
+                    </div>
+                </div>
+            </div>
+            <form id="bookingForm" class="booking-details" novalidate>
+                <h4 style="margin-bottom: 20px;">Confirm Booking</h4>
+                <p style="margin-bottom: 20px; font-weight: 500; color: var(--color-brand-blue);">
+                    <span class="material-icons" style="font-size: 1rem; vertical-align: middle;">event</span>
+                    <span id="selected-date-display"></span> at <span id="selected-time-display"></span>
+                </p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="fname" class="form-input" placeholder="First Name" required>
+                        <div class="error-msg">First name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lname" class="form-input" placeholder="Last Name" required>
+                        <div class="error-msg">Last name is required</div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <input type="email" id="email" class="form-input" placeholder="Work Email" required>
+                    <div class="error-msg">Please enter a valid work email</div>
+                </div>
+
+                <button type="submit" class="book-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+    <section class="section target-section">
+        <div class="container">
+            <h2 class="section-title">Who is this for?</h2>
+            <div class="target-grid">
+                <div class="target-card" data-aos="fade" data-aos-delay="200">
+                    <div class="target-icon"><span class="material-icons">store</span></div>
+                    <h4>Retailers Switching Platforms</h4>
+                    <p>Tired of clunky software? We'll show you how painless it is to migrate your inventory and data to
+                        MinimalSaaS.</p>
+                </div>
+                <div class="target-card" data-aos="fade" data-aos-delay="300">
+                    <div class="target-icon"><span class="material-icons">domain</span></div>
+                    <h4>Enterprise & High-Volume</h4>
+                    <p>Need higher API limits or custom integrations? We'll discuss our enterprise infrastructure and
+                        dedicated support.</p>
+                </div>
+                <div class="target-card" data-aos="fade" data-aos-delay="400">
+                    <div class="target-icon"><span class="material-icons">storefront</span></div>
+                    <h4>Multi-Location Stores</h4>
+                    <p>Manage 2 or 20 locations from one screen. See how our unified dashboard creates a single source
+                        of truth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section learn-section">
+        <div class="container">
+            <h2 class="section-title">What You’ll Learn in 30 Minutes</h2>
+            <div class="learn-grid">
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Platform Tour</h4>
+                    <p>A comprehensive walkthrough of the dashboard, inventory, and POS systems tailored to your
+                        workflow.</p>
+                </div>
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Migration Strategy</h4>
+                    <p>Expert advice on moving your existing products and customer data from your current platform.</p>
+                </div>
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Custom Pricing</h4>
+                    <p>Discuss volume discounts and enterprise features that fit your business scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section why-section">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-text" data-aos="fade-down">
+                    <h2 style="margin-bottom: 30px;">Why Book a Demo?</h2>
+                    <ul class="why-list">
+                        <li><span class="material-icons">check_circle</span> Get answers to specific technical
+                            questions.</li>
+                        <li><span class="material-icons">check_circle</span> See hidden features not shown on the
+                            website.</li>
+                        <li><span class="material-icons">check_circle</span> Save time by having an expert set up your
+                            trial.</li>
+                    </ul>
+                </div>
+                <div class="expert-card">
+                    <!-- <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=SJ" alt="Sarah Jones" class="expert-img"> -->
+                    <p class="expert-name">Sachin</p>
+                    <p class="expert-role">Product Specialist</p>
+                    <p class="expert-quote">"I've helped over 500 stores launch. I'd love to show you how MinimalSaaS
+                        can simplify your business."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section faq-section">
+        <div class="container-narrow">
+            <h2 class="section-title">Common Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How long is the demo?
+                    <span class="material-icons">expand_more</span>
+                </div>
+                <div class="faq-answer">The demo typically lasts 30 minutes, with 15 minutes for Q&A.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is the demo free?
+                    <span class="material-icons">expand_more</span>
+                </div>
+                <div class="faq-answer">Yes, absolutely. It's a free consultation with no commitment required.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can I invite my team?
+                    <span class="material-icons">expand_more</span>
+                </div>
+                <div class="faq-answer">Yes, once you book a time, you can forward the calendar invite to anyone on your
+                    team.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="saas-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-about" data-aos="fade-down" data-aos-delay="100">
+                    <h3 class="footer-logo"> <a href="index.html"><img src="./assets/stackly-logo.webp"
+                                class="logo"></a>
+                    </h3>
+                    <p class="footer-about-text">
+                        The all-in-one platform for modern, minimal retail.
+                        Helping you sell more, with less clutter.
+                    </p>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="300">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="booknow.html">Book a Demo</a></li>
+                        <li><a href="404page.html">Contact Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="400">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="500">
+                    <h4>Social Links</h4>
+                    <div class="footer-socials">
+                        <a href="404page.html" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="404page.html" aria-label="Twitter"><span class="material-icons">share</span></a>
+                        <a href="404page.html" aria-label="LinkedIn"><span class="material-icons">work</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Stackly. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+            // once: true
+        });
+    </script>
+    <script>
+        let currentYear = new Date().getFullYear();
+        let currentMonth = new Date().getMonth();
+        const today = new Date();
+
+        let selectedDateObj = null;
+        let selectedTimeSlot = null;
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        function renderCalendar(month, year) {
+            const daysGrid = document.getElementById('calendarDays');
+            const monthDisplay = document.getElementById('currentMonthDisplay');
+            monthDisplay.innerText = `${monthNames[month]} ${year}`;
+            let html = `
+                <div class="day-label">S</div><div class="day-label">M</div><div class="day-label">T</div>
+                <div class="day-label">W</div><div class="day-label">T</div><div class="day-label">F</div><div class="day-label">S</div>
+            `;
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            for (let i = 0; i < firstDayIndex; i++) {
+                html += `<div class="day disabled"></div>`;
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                const checkDate = new Date(year, month, i);
+                const isPast = checkDate.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0);
+                let classes = 'day';
+                if (isPast) classes += ' disabled';
+                if (!isPast && isToday(i, month, year)) classes += ' today';
+
+                const clickAttr = isPast ? '' : `onclick="selectDate(this, ${i}, ${month}, ${year})"`;
+
+                html += `<div class="${classes}" ${clickAttr}>${i}</div>`;
+            }
+
+            daysGrid.innerHTML = html;
+        }
+
+        function isToday(day, month, year) {
+            const d = new Date();
+            return day === d.getDate() && month === d.getMonth() && year === d.getFullYear();
+        }
+
+        function changeMonth(direction) {
+            currentMonth += direction;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            } else if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar(currentMonth, currentYear);
+        }
+
+        function selectDate(el, day, month, year) {
+            document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('active');
+                slot.classList.remove('disabled');
+            });
+
+            document.querySelector('.booking-details').style.display = 'none';
+
+            selectedDateObj = new Date(year, month, day);
+            el.classList.add('selected');
+
+            const dateString = selectedDateObj.toLocaleDateString('en-US', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            });
+
+            document.getElementById('time-helper-text').innerText = `Available times for ${dateString}`;
+            document.getElementById('date-error-msg').style.display = 'none';
+
+            document.getElementById('selected-date-display').innerText = dateString;
+        }
+
+        function selectTime(el, time) {
+            if (!selectedDateObj) {
+                document.getElementById('date-error-msg').style.display = 'block';
+                return;
+            }
+
+            document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('active'));
+
+            selectedTimeSlot = time;
+            el.classList.add('active');
+
+            document.getElementById('selected-time-display').innerText = time;
+
+            const form = document.querySelector('.booking-details');
+            form.style.display = 'block';
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleFaq(el) {
+            el.parentElement.classList.toggle('active');
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            this.querySelectorAll('input').forEach(input => {
+                const errorDiv = input.nextElementSibling;
+                if (!input.value.trim()) {
+                    input.classList.add('invalid');
+                    errorDiv.style.display = 'block';
+                    isValid = false;
+                } else {
+                    input.classList.remove('invalid');
+                    errorDiv.style.display = 'none';
+                }
+
+                if (input.type === 'email' && input.value.trim()) {
+                    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!regex.test(input.value)) {
+                        input.classList.add('invalid');
+                        errorDiv.innerText = "Invalid email format";
+                        errorDiv.style.display = 'block';
+                        isValid = false;
+                    }
+                }
+            });
+
+            if (isValid) {
+                const btn = this.querySelector('.book-btn');
+                btn.innerText = "Booking...";
+                setTimeout(() => {
+                    // alert(`Demo Confirmed for ${document.getElementById('selected-date-display').innerText} at ${selectedTimeSlot}! Check your inbox.`);
+                    location.reload();
+                    window.location.href = '404page.html'
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+
+</html>

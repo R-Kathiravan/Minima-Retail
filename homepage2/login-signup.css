@@ -1,0 +1,330 @@
+:root {
+    --color-brand-blue: #007bff;
+    --color-text-dark: #111111;
+    --color-text-light: #555555;
+    --color-bg-light: #f9f9f9;
+    --color-border: #eeeeee;
+    --color-error: #dc3545;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFFFFF;
+    color: var(--color-text-light);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.auth-layout {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brand-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(0, 80, 170, 0.85), rgba(0, 0, 0, 0.6)),
+        url('./assets/login-signup-img.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    z-index: 2;
+    transition: transform 0.7s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.panel-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-content {
+    position: relative;
+    height: 150px;
+}
+
+.panel-text-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.panel-text-group.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.brand-panel h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.brand-panel p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 450px;
+}
+
+.form-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s cubic-bezier(0.8, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 10px 0;
+}
+
+.form-subtitle {
+    font-size: 1rem;
+}
+
+.toggle-link {
+    color: var(--color-brand-blue);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-link:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-brand-blue);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: #999;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--color-brand-blue);
+    background-color: #FFFFFF;
+    padding: 0 6px;
+    font-weight: 600;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-text-dark);
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider span {
+    margin: 0 15px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.error-msg {
+    color: var(--color-error);
+    font-size: 0.85rem;
+    margin-top: 6px;
+    display: none;
+}
+
+.form-input.invalid {
+    border-color: var(--color-error);
+}
+
+.forms-wrapper {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.auth-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+    background-color: #fff;
+}
+
+.auth-form.hidden-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auth-form.hidden-right {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auth-form.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+body.reversed .brand-panel {
+    transform: translateX(100%);
+}
+
+body.reversed .form-panel {
+    transform: translateX(-100%);
+}
+
+@media (max-width: 900px) {
+    .auth-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand-panel {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        padding: 30px;
+        transform: none !important;
+    }
+
+    .form-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none !important;
+    }
+
+    .panel-content {
+        height: auto;
+    }
+
+    .panel-text-group {
+        position: relative;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .panel-text-group.hidden {
+        display: none;
+    }
+}

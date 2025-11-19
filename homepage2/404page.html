@@ -1,12 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Page || SaaS</title>
+    <link rel="stylesheet" href="shared.css">
 </head>
+
 <body>
-    404 page not found
-    <a href="index.html"> Go to home page</a>
+    <style>
+        .page-content {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 40px;
+        }
+
+        .page-content h1 {
+            font-size: 46px;
+            color: red;
+        }
+
+        .page-content p {
+            font-size: larger;
+        }
+
+        .page-content a {
+            padding: 12px 20px;
+            border: 1px solid;
+            margin: auto;
+            text-decoration: none;
+            background-color: rgba(0, 0, 255, 0.688);
+            color: white;
+            border-radius: 20px;
+            transition: all 0.4s ease-out;
+        }
+
+        .page-content a:hover {
+            background-color: blue;
+            text-decoration: underline;
+        }
+
+        .page-link {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+    <header>
+        <div class="head-items">
+            <div class="head-logo">
+                <a href="index.html"><img src="./assets/stackly-logo.webp" class="logo"></a>
+            </div>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <div class="hide-head-btn">
+                    <a href="login-signup.html">Login/SignUp</a>
+                    <a href="pricing.html">Get Started</a>
+                    <div class="btn-close"><span class="material-icons">close</span></div>
+                </div>
+            </div>
+            <div class="head-btn">
+                <a href="login-signup.html">Login/SignUp</a>
+                <a href="pricing.html">Get Started</a>
+            </div>
+            <div class="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <div class="page-content">
+        <h1>404 Page Not Found!</h1>
+        <p>Seems like you've entered a Working Page</p>
+        <div class="page-link">
+            <p>Redirect To Home Page</p>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    <footer class="saas-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-about" data-aos="fade-down" data-aos-delay="100">
+                    <h3 class="footer-logo"> <a href="index.html"><img src="./assets/stackly-logo.webp"
+                                class="logo"></a>
+                    </h3>
+                    <p class="footer-about-text">
+                        The all-in-one platform for modern, minimal retail.
+                        Helping you sell more, with less clutter.
+                    </p>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="200">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="300">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="booknow.html">Book a Demo</a></li>
+                        <li><a href="404page.html">Contact Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="400">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" data-aos="fade-down" data-aos-delay="500">
+                    <h4>Social Links</h4>
+                    <div class="footer-socials">
+                        <a href="404page.html" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="404page.html" aria-label="Twitter"><span class="material-icons">share</span></a>
+                        <a href="404page.html" aria-label="LinkedIn"><span class="material-icons">work</span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Stackly. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>

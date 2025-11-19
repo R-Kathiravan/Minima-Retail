@@ -21,8 +21,13 @@
             </div>
             <div class="menu-items">
                 <div class="home-nav">
-                    <a href="index.html" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                    <div class="home-select">
+                    <a href="index.html" class="home-btn">Home</a>
+
+                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                        expand_more
+                    </span>
+
+                    <div class="home-select" id="homeDropdown">
                         <a href="../index.html">Home Page 1</a>
                     </div>
                 </div>
@@ -31,14 +36,14 @@
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
                 <div class="hide-head-btn">
-                    <a href="404page.html">Login/SignUp</a>
-                    <a href="404page.html">Get Started</a>
+                    <a href="login-signup.html">Login/SignUp</a>
+                    <a href="pricing.html">Get Started</a>
                     <div class="btn-close"><span class="material-icons">close</span></div>
                 </div>
             </div>
             <div class="head-btn">
-                <a href="404page.html">Login/SignUp</a>
-                <a href="404page.html">Get Started</a>
+                <a href="login-signup.html">Login/SignUp</a>
+                <a href="pricing.html">Get Started</a>
             </div>
             <div class="hamburger">
                 <span class="material-icons">menu</span>
@@ -105,13 +110,12 @@
 
                 </div>
 
-
                 <div class="hero-cta-group" data-aos="fade-down">
-                    <a href="404page.html" class="cta-button primary">
+                    <a href="login-signup.html?view=signup" class="cta-button primary">
                         Start Your 14-Day Free Trial
                         <span class="material-icons">arrow_forward</span>
                     </a>
-                    <a href="404page.html" class="cta-button secondary">
+                    <a href="booknow.html" class="cta-button secondary">
                         Book a Demo
                     </a>
                 </div>
@@ -339,7 +343,7 @@
                         <li><span class="material-icons">check_circle</span>24/7 Phone Support</li>
                     </ul>
 
-                    <a href="404page.html" class="price-cta-button secondary">Book a Demo</a>
+                    <a href="booknow.html" class="price-cta-button secondary">Book a Demo</a>
                 </div>
 
             </div>
@@ -353,7 +357,7 @@
                 Start your 14-day free trial today. No credit card required.
                 Cancel anytime.
             </p>
-            <a href="404page.html" class="final-cta-button">
+            <a href="login-signup.html" class="final-cta-button">
                 Start Your 14-Day Free Trial
                 <span class="material-icons">arrow_forward</span>
             </a>
@@ -379,15 +383,14 @@
                         <li><a href="features.html">Features</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="404page.html">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section" data-aos="fade-down" data-aos-delay="300">
                     <h4>Support</h4>
                     <ul class="footer-links">
                         <li><a href="404page.html">Help Center</a></li>
-                        <li><a href="404page.html">Book a Demo</a></li>
-                        <li><a href="404page.html">API Docs</a></li>
+                        <li><a href="booknow.html">Book a Demo</a></li>
                         <li><a href="404page.html">Contact Sales</a></li>
                     </ul>
                 </div>
@@ -529,6 +532,20 @@
                 howToTabButtons[0].click();
             }
 
+        });
+        const homeDropdownBtn = document.getElementById("homeDropdownBtn");
+        const homeDropdown = document.getElementById("homeDropdown");
+        const icon = document.querySelector(".dropdown-icon");
+
+        homeDropdownBtn.addEventListener("click", () => {
+            homeDropdown.classList.toggle("show");
+            icon.classList.toggle("rotate");
+        });
+        document.addEventListener("click", (e) => {
+            if (!homeDropdown.contains(e.target) && !homeDropdownBtn.contains(e.target)) {
+                homeDropdown.classList.remove("show");
+                icon.classList.remove("rotate");
+            }
         });
     </script>
 </body>

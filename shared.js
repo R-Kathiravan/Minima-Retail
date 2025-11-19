@@ -16,7 +16,7 @@ const productData = {
             ],
             extraImages: [
                 "./assets/products-mobile1.webp",
-                "./assets/products-mobile2.webp",
+                "./assets/products-mobile2.webp"
             ],
             reviews: [
                 {
@@ -750,6 +750,8 @@ function loadProductDetails() {
 
     const img2 = document.getElementById("product-img-2");
     const img3 = document.getElementById("product-img-3");
+    console.log("extra images", product.extraImages[0])
+    console.log("extra images", product.extraImages[1])
 
     if (product.extraImages && product.extraImages.length >= 2) {
         img2.src = product.extraImages[0];
@@ -803,7 +805,7 @@ function addToCart() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
-    showToast(`${product.name} added to cart!`,"success");
+    showToast(`${product.name} added to cart!`, "success");
 }
 
 function loadCart() {
@@ -846,7 +848,7 @@ function removeItem(index) {
 }
 
 function checkout() {
-    showToast("Thank you for shopping with Minimal Retail!","success");
+    showToast("Thank you for shopping with Minimal Retail!", "success");
     localStorage.removeItem("cart");
     window.location.href = "404page.html";
 }
@@ -903,16 +905,16 @@ document.querySelector(".close-btn").addEventListener("click", function () {
 function showToast(message, type = "default") {
     const toast = document.getElementById("toast");
 
-     toast.textContent = message;
+    toast.textContent = message;
 
-     if (type === "success") toast.style.background = "#28a745";
+    if (type === "success") toast.style.background = "#28a745";
     else if (type === "error") toast.style.background = "#dc3545";
     else if (type === "info") toast.style.background = "#007bff";
     else toast.style.background = "#333";
 
-     toast.classList.add("show");
+    toast.classList.add("show");
 
-     setTimeout(() => {
+    setTimeout(() => {
         toast.classList.remove("show");
     }, 3000);
 }
