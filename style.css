@@ -4,7 +4,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-header {
+/* header {
     position: fixed;
     top: 0px;
     width: 100%;
@@ -54,11 +54,11 @@ header {
     100% {
         transform: translateX(-100%);
     }
-}
+} */
 
 .menu-header {
     position: fixed;
-    top: 30px;
+    top: 0px;
     width: 100%;
     z-index: 100;
 }
