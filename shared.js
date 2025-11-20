@@ -805,6 +805,7 @@ function addToCart() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
+    updateCartCount1();
     showToast(`${product.name} added to cart!`, "success");
 }
 
@@ -818,7 +819,7 @@ function loadCart() {
     let total = 0;
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = "<p>Your cart is empty!</p><a href='product.html'>Purchase Now!</a";
+        cartContainer.innerHTML = "<p>Your cart is empty!</p><a href='product.html'>Purchase Now!</a>";
         summary.innerHTML = "";
         return;
     }
@@ -871,6 +872,12 @@ function updateCartCount() {
     if (countEl) countEl.textContent = cart.length;
 }
 
+function updateCartCount1() {
+    const countEl = document.getElementById("cart-count1");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (countEl) countEl.textContent = cart.length;
+}
+
 function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
@@ -880,6 +887,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProductDetails();
     loadCart();
     updateCartCount();
+    updateCartCount1();
 });
 
 function openFS(img) {
@@ -918,4 +926,3 @@ function showToast(message, type = "default") {
         toast.classList.remove("show");
     }, 3000);
 }
-
